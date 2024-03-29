@@ -1,9 +1,8 @@
-import {DocxConverter} from "./src/DocxConverter.ts";
+import { DocxConverter } from './src/DocxConverter.ts'
 
 async function main() {
-
-	const converter = new DocxConverter('./temp/Kachanov_resume.docx')
-	await converter.process()
+    const converter = new DocxConverter('./temp/Kachanov_resume.docx')
+    await converter.process()
 }
 
-await main();
+await main()

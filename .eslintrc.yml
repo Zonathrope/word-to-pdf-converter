@@ -1,0 +1,70 @@
+---
+# ESLint Configuration for Node.js Application
+
+# Specify the environments your script will execute in.
+env:
+  node: true
+  commonjs: true
+
+# Specify the parser options
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+
+# Specify the plugins
+plugins:
+  - node
+
+# Specify the extending configuration(s)
+extends:
+  - eslint:recommended
+  - plugin:node/recommended
+
+# Specify the rules
+rules:
+  # Customize rules as per your preferences
+  # For example:
+  # Indentation
+  indent:
+    - error
+    - 2
+
+  # Enforce the use of strict mode in strict mode enabled files.
+  strict: error
+
+  # Allow console logging for development environment
+  no-console: off
+
+  # Ensure correct spacing before and after arrow functions' arrow
+  "arrow-spacing": error
+
+  # Ensure consistent return values in arrow functions
+  "consistent-return": error
+
+  # Ensure curly braces around blocks are used consistently
+  curly: error
+
+  # Disallow the use of undeclared variables unless mentioned in /*global */ comments
+  "no-undef": error
+
+  # Disallow the use of variables before they are defined
+  "no-use-before-define": error
+
+  # Enforce the use of === and !==
+  eqeqeq: error
+
+  # Require or disallow semicolons instead of ASI
+  semi:
+    - error
+    - always
+
+# Specify the files and directories to ignore
+ignore:
+  - node_modules/
+  - dist/
+
+# Specify additional file extensions ESLint should consider
+extensions:
+  - ".js"
+  - ".jsx"
+  - ".ts"

@@ -1,6 +1,5 @@
 class HTMLBuilder {
-
-	private readonly htmlHeader = `<!doctype html>
+    private readonly htmlHeader = `<!doctype html>
    <html lang="en">
    <head>
        <meta charset="UTF-8">
@@ -11,12 +10,11 @@ class HTMLBuilder {
    </head>
    <body>`
 
-	private readonly htmlFooter = `</body></html>`
+    private readonly htmlFooter = `</body></html>`
 
-	build(html: string) {
-		return `${this.htmlHeader}${html}${this.htmlFooter}`
-	}
-
+    build(html: string) {
+        return `${this.htmlHeader}${html}${this.htmlFooter}`
+    }
 }
 
 export default new HTMLBuilder()
